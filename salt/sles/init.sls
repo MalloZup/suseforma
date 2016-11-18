@@ -1,0 +1,2 @@
+include:
+  - sles.repos

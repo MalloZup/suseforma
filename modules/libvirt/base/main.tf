@@ -18,6 +18,9 @@ output "configuration" {
       "sles12sp1", "${libvirt_volume.sles12sp1.id}",
       "network_name", "${var.network_name}",
 
+      "cc_username", "${var.cc_username}",
+      "cc_password", "${var.cc_password}",
+      "package_mirror", "${replace(var.package_mirror, "/^$/", "null")}",
       "pool", "${var.pool}",
       "bridge", "${var.bridge}",
       "use_avahi", "${element(list("False", "True"), var.use_avahi)}",
