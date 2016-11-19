@@ -1,18 +1,3 @@
-variable "cc_username" {
-  description = "username for the Customer Center"
-  type = "string"
-}
-
-variable "cc_password" {
-  description = "password for the Customer Center"
-  type = "string"
-}
-
-variable "package_mirror" {
-  description = "hostname of the package mirror or leave the default for no package mirror"
-  default = "null"
-}
-
 variable "pool" {
   description = "libvirt storage pool name for VM disks"
   default = "default"

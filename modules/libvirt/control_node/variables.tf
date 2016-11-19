@@ -3,6 +3,11 @@ variable "base_configuration" {
   type = "map"
 }
 
+variable "image" {
+  description = "One of: opensuse421, sles11sp3, sles11sp4, sles12, sles12sp1"
+  type = "string"
+}
+
 variable "name" {
   description = "hostname, without the domain part"
   type = "string"
