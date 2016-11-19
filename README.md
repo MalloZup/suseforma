@@ -5,12 +5,12 @@ generic framework inspired from sumaform https://github.com/moio/sumaform
 
 ## Install prereq:
 
-´´´console
+```console
 DISTRO=openSUSE_Leap_42.1
 sudo zypper addrepo http://download.opensuse.org/repositories/Virtualization:containers/$DISTRO/Virtualization:containers.repo
 sudo zypper refresh
 sudo zypper install terraform-provider-libvirt
-´´´
+```
 
 ## How to use suseforma:
 
