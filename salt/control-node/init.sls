@@ -1,5 +1,5 @@
 include:
-  - sles.repos
+  - control-node.repos
 
 ssh-private-key:
   file.managed:
@@ -26,3 +26,5 @@ authorized-keys:
     - user: root
     - group: root
     - mode: 700
+
+
