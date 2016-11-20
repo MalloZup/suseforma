@@ -1,3 +1,6 @@
+include:
+  - sles.repos
+
 ssh-private-key:
   file.managed:
     - name: /root/.ssh/id_rsa
