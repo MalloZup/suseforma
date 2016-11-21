@@ -2,9 +2,20 @@
 generic framework inspired from sumaform https://github.com/moio/sumaform
 
 
+
+## Install prereq:
+
+```console
+DISTRO=openSUSE_Leap_42.1
+sudo zypper addrepo http://download.opensuse.org/repositories/Virtualization:containers/$DISTRO/Virtualization:containers.repo
+sudo zypper refresh
+sudo zypper install terraform-provider-libvirt
+```
+
 ## How to use suseforma:
 
-Suseforma is a modified copy of sumaform, and is only for a generic demo.
+Suseforma is a modified copy of sumaform, but for generic usage, not spacewalk specific.
+
 
 Suseforma is basically terraform, libvirtd (https://github.com/dmacvicar/terraform-provider-libvirt) with salt.
 
@@ -13,9 +24,8 @@ It's just a quick generic scheleton, to show people how to benift from this 2 to
 
 So we use terraform for setup network, machines, disks etc, and salt for provisioning the machine.
 
-The control-node machine, can be used as concept to orchestrate machines. In spacewalk-testsuite(https://github.com/SUSE/spacewalk-testsuite-base),
-
-we run cucumber code inside the control-node that orchestrate the multiples-machines.
+The control-node machine, is a concept to orchestrate machines. Take this if you wish.
+ In spacewalk-testsuite(https://github.com/SUSE/spacewalk-testsuite-base), we run cucumber code inside the control-node that orchestrate the multiples-machines.
 
 
 You could also use susetest, for just simpy run multiple machines test in python. 
