@@ -34,3 +34,13 @@ https://github.com/okirch/susetest
 
 
 For getting more in touch, take inspiration from sumaform.
+
+
+## Run the example:
+
+``
+vi main.tf.example
+mv main.tf.example main.tf
+terraform get
+terraform apply
+``
