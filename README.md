@@ -38,9 +38,9 @@ For getting more in touch, take inspiration from sumaform.
 
 ## Run the example:
 
-``
+```console
 vi main.tf.example
 mv main.tf.example main.tf
 terraform get
 terraform apply
-``
+```
