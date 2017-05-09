@@ -12,6 +12,18 @@ sudo zypper refresh
 sudo zypper install terraform-provider-libvirt
 ```
 
+
+## Run the example:
+
+```console
+vi main.tf.example
+mv main.tf.example main.tf
+terraform get
+terraform apply
+```
+
+
+
 ## How to use suseforma:
 
 Suseforma is a modified copy of sumaform, but for generic usage, not spacewalk specific.
@@ -35,12 +47,3 @@ https://github.com/okirch/susetest
 
 For getting more in touch, take inspiration from sumaform.
 
-
-## Run the example:
-
-```console
-vi main.tf.example
-mv main.tf.example main.tf
-terraform get
-terraform apply
-```
