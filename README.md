@@ -1,6 +1,6 @@
 # suseforma
 generic framework inspired from sumaform https://github.com/moio/sumaform
-Suseforma is a simplified generic sumaform version. (salt + terraform (libvirt-plugin)
+Suseforma is a simplified generic sumaform version. (salt + terraform (libvirt-plugin), and should help you to learn create a template for your project
 
 https://github.com/dmacvicar/terraform-provider-libvirt
 
