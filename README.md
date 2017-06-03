@@ -35,10 +35,7 @@ https://github.com/MalloZup/suseforma/blob/master/main.tf.example#L28
  https://github.com/MalloZup/suseforma/blob/master/salt/top.sls
 * 3 we create the dir on salt and put init.sls with some operation salt.
   
-
-A vm has a diffrente role, so it will execute all role assigned to this role
-control node doesn't need because of this:
-
+The control-node, has the grain definiton **"hidden"** in terraform
 https://github.com/MalloZup/suseforma/blob/master/modules/libvirt/control_node/main.tf#L8
 _____
 
