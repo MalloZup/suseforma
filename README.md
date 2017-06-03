@@ -18,28 +18,29 @@ terraform apply
 
 ## How to use suseforma:
 
-Baiscally, we run diffrent salt-state defining grains, roles. 
+Baiscally, terraform create disks and networks etc (main.tf file)
+Salt configure and provisione the machine, with roles (grains)
 
+
+#### roles
 On the top.sls file 
 https://github.com/MalloZup/suseforma/blob/master/salt/top.sls
 
-we can define which role will execute what.
-If you need a new-role, create a dir in `suseforma/salt/` called as the new role you define in top.sls, and put init.sls and so on states, in this dir.
-
-Finally modify the terraform.tf file with the new role
-
+**creating new role**
+Example:
+*frankzappa:*
+* 1 we define the role on main
+https://github.com/MalloZup/suseforma/blob/master/main.tf.example#L28
+* 2 we create role defintion on grain
+ https://github.com/MalloZup/suseforma/blob/master/salt/top.sls
+* 3 we create the dir on salt and put init.sls with some operation salt.
+  
 
 A vm has a diffrente role, so it will execute all role assigned to this role
 control node doesn't need because of this:
-https://github.com/MalloZup/suseforma/blob/master/main.tf.example#L28
+
 https://github.com/MalloZup/suseforma/blob/master/modules/libvirt/control_node/main.tf#L8
-
-
-Example franzappa role:
-
-https://github.com/MalloZup/suseforma/blob/master/salt/frankzappa/init.sls
-https://github.com/MalloZup/suseforma/tree/master/salt/frankzappa
-
+_____
 
 Suseforma is basically terraform, libvirtd (https://github.com/dmacvicar/terraform-provider-libvirt) with salt.
 This is for learning purpose.
