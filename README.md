@@ -10,6 +10,8 @@ https://github.com/moio/sumaform/#installation
 
 ## Run the example:
 
+* modify the prefiy in main.tf.example with a unique value:https://github.com/MalloZup/suseforma/blob/master/main.tf.example#L11
+* make sure you have libvirt running and the network you use on main.tf exists
 ```console
 vi main.tf.example
 cp main.tf.example main.tf
