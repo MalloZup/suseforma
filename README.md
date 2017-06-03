@@ -18,6 +18,29 @@ terraform apply
 
 ## How to use suseforma:
 
+Baiscally, we run diffrent salt-state defining grains, roles. 
+
+On the top.sls file 
+https://github.com/MalloZup/suseforma/blob/master/salt/top.sls
+
+we can define which role will execute what.
+If you need a new-role, create a dir in `suseforma/salt/` called as the new role you define in top.sls, and put init.sls and so on states, in this dir.
+
+Finally modify the terraform.tf file with the new role
+
+
+A vm has a diffrente role, so it will execute all role assigned to this role
+control node doesn't need because of this:
+https://github.com/MalloZup/suseforma/blob/master/main.tf.example#L28
+https://github.com/MalloZup/suseforma/blob/master/modules/libvirt/control_node/main.tf#L8
+
+
+Example franzappa role:
+
+https://github.com/MalloZup/suseforma/blob/master/salt/frankzappa/init.sls
+https://github.com/MalloZup/suseforma/tree/master/salt/frankzappa
+
+
 Suseforma is basically terraform, libvirtd (https://github.com/dmacvicar/terraform-provider-libvirt) with salt.
 This is for learning purpose.
 
