@@ -43,7 +43,7 @@ _____
 Suseforma is basically terraform, libvirtd (https://github.com/dmacvicar/terraform-provider-libvirt) with salt.
 This is for learning purpose.
 
-The control-node machine, is a concept to orchestrate machinee, in complex scenario. Take this if you wish.
+The control-node machine, is a concept to orchestrate machines, in complex scenario.
  In spacewalk-testsuite(https://github.com/SUSE/spacewalk-testsuite-base), we run cucumber code inside the control-node that orchestrate the multiples-machines.
 
 For getting more in touch, take inspiration from sumaform.
