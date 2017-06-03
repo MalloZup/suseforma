@@ -1,6 +1,6 @@
-resource "libvirt_volume" "opensuse421" {
-  name = "${var.name_prefix}opensuse421"
-  source = "http://download.opensuse.org/repositories/home:/SilvioMoioli:/Terraform:/Images/images/opensuse421.x86_64.qcow2"
+resource "libvirt_volume" "opensuse422" {
+  name = "${var.name_prefix}opensuse422"
+  source = "http://download.opensuse.org/repositories/home:/SilvioMoioli:/Terraform:/Images/images/opensuse422.x86_64.qcow2"
   pool = "${var.pool}"
 }
 
@@ -8,7 +8,7 @@ output "configuration" {
   // HACK: work around https://github.com/hashicorp/terraform/issues/9549
   value = "${
     map(
-      "opensuse421", "${libvirt_volume.opensuse421.id}",
+      "opensuse422", "${libvirt_volume.opensuse422.id}",
       "network_name", "${var.network_name}",
 
       "pool", "${var.pool}",

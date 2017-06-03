@@ -1,7 +1,8 @@
 # suseforma
 generic framework inspired from sumaform https://github.com/moio/sumaform
-Suseforma is a simplified generic sumaform version. (salt + terraform)
+Suseforma is a simplified generic sumaform version. (salt + terraform (libvirt-plugin)
 
+https://github.com/dmacvicar/terraform-provider-libvirt
 
 ## Install prereq:
 
@@ -11,7 +12,7 @@ https://github.com/moio/sumaform/#installation
 
 ```console
 vi main.tf.example
-mv main.tf.example main.tf
+cp main.tf.example main.tf
 terraform get
 terraform apply
 ```
@@ -19,7 +20,7 @@ terraform apply
 ## How to use suseforma:
 
 Baiscally, terraform create disks and networks etc (main.tf file)
-Salt run after matching  the roles (grains)
+Salt run after matching  the roles (grains), and execute the states assigned.
 
 
 #### roles
@@ -42,7 +43,7 @@ _____
 Suseforma is basically terraform, libvirtd (https://github.com/dmacvicar/terraform-provider-libvirt) with salt.
 This is for learning purpose.
 
-The control-node machine, is a concept to orchestrate machines. Take this if you wish.
+The control-node machine, is a concept to orchestrate machinee, in complex scenario. Take this if you wish.
  In spacewalk-testsuite(https://github.com/SUSE/spacewalk-testsuite-base), we run cucumber code inside the control-node that orchestrate the multiples-machines.
 
 For getting more in touch, take inspiration from sumaform.
