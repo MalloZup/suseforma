@@ -19,7 +19,7 @@ terraform apply
 ## How to use suseforma:
 
 Baiscally, terraform create disks and networks etc (main.tf file)
-Salt configure and provisione the machine, with roles (grains)
+Salt run after matching  the roles (grains)
 
 
 #### roles
